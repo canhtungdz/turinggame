@@ -1,4 +1,4 @@
-import type { Direction, MachineCard, Symbol, TestCase } from './types';
+import type { MachineCard } from './types';
 import { HALT_STATE } from '../store/useGameStore';
 
 export interface TapeState {
