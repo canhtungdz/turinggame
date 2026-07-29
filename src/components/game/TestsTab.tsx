@@ -95,7 +95,7 @@ const TestsTab: React.FC<TestsTabProps> = ({ onOpenMenu }) => {
         const activeRuleIdx = currentCard?.rules.findIndex(r => r.read === currentSymbol);
 
         return (
-            <div className="p-4 flex flex-col h-full relative">
+            <div className="p-4 pb-24 flex flex-col h-full relative">
                 <button
                     onClick={() => { setViewedTestIdx(null); setAutoRun(false); }}
                     className="mb-4 text-[#00FF00] text-sm hover:underline self-start font-bold"
@@ -264,7 +264,7 @@ const TestsTab: React.FC<TestsTabProps> = ({ onOpenMenu }) => {
     // --- 2. MÀN HÌNH DANH SÁCH TEST (LIST VIEW) ---
     // ============================================
     return (
-        <div className="p-4 flex flex-col h-full relative">
+        <div className="p-4 pb-20 flex flex-col h-full relative">
             <div className="flex justify-between items-center mb-4 border-b border-[#00FF00]/30 pb-2 shrink-0">
                 <h2 className="text-lg font-bold uppercase">&gt; TEST_SUITE</h2>
             </div>
