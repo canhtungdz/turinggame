@@ -19,7 +19,7 @@ const InfoTab: React.FC = () => {
                 <h2 className="text-xl font-bold mb-2 uppercase border-b border-[#00FF00]/30 pb-2">
                     &gt; MISSION_OBJECTIVE
                 </h2>
-                <p className="text-slate-200 indent-4 tracking-wide leading-relaxed">
+                <p className="text-slate-200 indent-4 tracking-wide leading-relaxed whitespace-pre-wrap">
                     {levelInfo.description}
                 </p>
             </div>
@@ -32,7 +32,7 @@ const InfoTab: React.FC = () => {
                     </h3>
                     <ul className="list-disc list-inside space-y-1 text-slate-300">
                         {levelInfo.hints.map((hint, idx) => (
-                            <li key={idx} className="text-sm">{hint}</li>
+                            <li key={idx} className="text-sm whitespace-pre-wrap">{hint}</li>
                         ))}
                     </ul>
                 </div>

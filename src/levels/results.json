@@ -1,0 +1,261 @@
+{
+  "lvl_01": {
+    "title": "Well, that's ODD",
+    "problem": "Create a machine that, given in input a sequence of numbers, increments by 1 every EVEN digit.\n\nFor example, if your input is this:\n_____16334087_____\nThen your output should be this:\n_____17335197_____\n\n(HINT: Remember that the number 0 is EVEN)",
+    "tests": {
+      "test_01": "0123456789",
+      "test_02": "6188022718",
+      "test_03": "271828182"
+    }
+  },
+  "lvl_02": {
+    "title": "[Counting inTENsifies]",
+    "problem": "Create a machine that, given a number, outputs the same number multiplied by TEN.\n\n(HINT: Underscores can be overwritten)\n\nEXAMPLE:\n__123__->__1230_",
+    "tests": {
+      "test_01": "3578",
+      "test_02": "100",
+      "test_03": "42"
+    }
+  },
+  "lvl_03": {
+    "title": "There can be only ONE",
+    "problem": "Scan the input, and delete every 1 except the first.\n\n(HINT: To delete a character, overwrite it with an underscore)\n\nEXAMPLE:\n__01213__->__012_3__",
+    "tests": {
+      "test_01": "111",
+      "test_02": "01234",
+      "test_03": "121131114"
+    }
+  },
+  "lvl_04": {
+    "title": "NICEn't",
+    "problem": "The President is sick of all the immature jokes on the Internet, and decided to ban the number 69.\nYour task is to create a machine that scans the input, and replaces every occurrence of the forbidden number with its politically correct neighbour, the number 68.\n\nEXAMPLES:\n__24699__->__24689__\n__69669__->__68668__",
+    "tests": {
+      "test_01": "69",
+      "test_02": "3691215",
+      "test_03": "969669996",
+      "test_04": "4569699"
+    }
+  },
+  "lvl_05": {
+    "title": "Hide and seek",
+    "problem": "Delete all the x's that are not hiding inside of parentheses.\n\nEXAMPLES:\n__x(xx)xx__->__(xx)__\n_(x)x(x)_->_(x)_(x)_",
+    "tests": {
+      "test_01": "xx(xxx)xx",
+      "test_02": "()x",
+      "test_03": "(xx)xxx(x)()",
+      "test_04": "xxx"
+    }
+  },
+  "lvl_06": {
+    "title": "Let's call it EVEN",
+    "problem": "In this level you will only need the numbers 0 and 1.\n\nCount the 1's in the input and determine if their total number is even or ODD.\nIf it's ODD, append another 1 at the end of the input, so that the total number of 1's becomes even.\nDo not overwrite the 0's.\n\nEXAMPLE:\n__0100__->__01001_\n__0110__->__0110__",
+    "tests": {
+      "test_01": "000",
+      "test_02": "100",
+      "test_03": "1011001",
+      "test_04": "01110011"
+    }
+  },
+  "lvl_07": {
+    "title": "The magic number",
+    "problem": "Write 1 if the input number is divisible by 3, or 0 otherwise.\n\nRemember to delete the original number, leave only the 0 or the 1.\n\n(HINT: A number is divisible by 3 if the sum of its digits is divisible by 3. If you're stuck, look at the previous level for inspiration.)\n\nEXAMPLES:\n__123__->__1__\n__301__->__0__",
+    "tests": {
+      "test_01": "2",
+      "test_02": "9",
+      "test_03": "11435754234",
+      "test_04": "0",
+      "test_05": "7689612857"
+    }
+  },
+  "lvl_08": {
+    "title": "Survival of the largest",
+    "problem": "Scan the input, and output the largest digit you find.\n\nTo make things easier, the input will contain only digits 1 through 5.\n\nEXAMPLES:\n__114223__->__4__\n__355252__->__5__",
+    "tests": {
+      "test_01": "1",
+      "test_02": "42",
+      "test_03": "12345",
+      "test_04": "1333221"
+    }
+  },
+  "lvl_09": {
+    "title": "Last ONE standing",
+    "problem": "Delete every 1 except the last.\n\n(HINT: It's like level 3, but moving backwards)",
+    "tests": {
+      "test_01": "0111",
+      "test_02": "10101010",
+      "test_03": "00000",
+      "test_04": "1000001"
+    }
+  },
+  "lvl_10": {
+    "title": "The other magic number",
+    "problem": "Write 1 if the input number is divisible by 100, or 0 otherwise.\n\nRemember to delete the original number, leave only the 0 or the 1.\n\nEXAMPLES:\n__123__->__0__\n__4200__->__1__",
+    "tests": {
+      "test_01": "100",
+      "test_02": "0",
+      "test_03": "545385279",
+      "test_04": "8724175865200",
+      "test_05": "1000001"
+    }
+  },
+  "lvl_11": {
+    "title": "+1!",
+    "problem": "Increment the input number by 1.\n\nEXAMPLE:\n__23__->__24__\n__39__->__40__",
+    "tests": {
+      "test_01": "123",
+      "test_02": "59",
+      "test_03": "60",
+      "test_04": "299",
+      "test_05": "999"
+    }
+  },
+  "lvl_12": {
+    "title": "The league of the N evil exes",
+    "problem": "You will receive in input a number N (one digit, between 0 and 9).\n\nWrite in output the letter X exactly N times, and delete the initial number.\n\nEXAMPLE:\n__5__->__XXXXX__",
+    "tests": {
+      "test_01": "1",
+      "test_02": "4",
+      "test_03": "0",
+      "test_04": "7"
+    }
+  },
+  "lvl_13": {
+    "title": "Clash of numbers",
+    "problem": "The input will contain two digits. Write the difference between the two digits (without sign).\n\n(HINT: There are two methods to solve this problem: you can calculate the difference directly, or you can decrement both digits one by one until one of them reaches 0. I recommend the second approach.)\n\nEXAMPLES:\n__53__->__2__\n__18__->__7__",
+    "tests": {
+      "test_01": "42",
+      "test_02": "07",
+      "test_03": "33",
+      "test_04": "00",
+      "test_05": "69",
+      "test_06": "20"
+    }
+  },
+  "lvl_14": {
+    "title": "It all adds up",
+    "problem": "The input will contain two numbers separated by an underscore. Your output should contain the sum of the two numbers.\n\nEXAMPLES:\n__15_9__->__24__\n__41_182__->__223__",
+    "tests": {
+      "test_01": "39_3",
+      "test_02": "400_20",
+      "test_03": "0_0",
+      "test_04": "0_13"
+    }
+  },
+  "lvl_15": {
+    "title": "Make it COUNT",
+    "problem": "Write (in numbers) how many times the letter X is repeated in the input tape.\n\nRemember to delete the X's as you count them: the final output must contain only the number.\n\nEXAMPLE:\n__XXX__->__3__\n\n(HINT: While running a test, increase the speed using the + button)",
+    "tests": {
+      "test_01": "XXXXX",
+      "test_02": "XXXXXXXXXXXXX",
+      "test_03": "",
+      "test_04": "X",
+      "test_05": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    }
+  },
+  "lvl_16": {
+    "title": "Repetita iuvant",
+    "problem": "You will receive in input a number N (just like two levels ago, but this time N will be greater than 10).\n\nWrite in output the letter X exactly N times, and delete the initial number.",
+    "tests": {
+      "test_01": "11",
+      "test_02": "42",
+      "test_03": "100"
+    }
+  },
+  "lvl_17": {
+    "title": "Double trouble",
+    "problem": "You just hacked in your bank account! Use a Turing Machine to double your amount of $.\n\nEXAMPLE:\n__$$$__->__$$$$$$__",
+    "tests": {
+      "test_01": "$$$$",
+      "test_02": "",
+      "test_03": "$$$$$$$$$$$$$$$"
+    }
+  },
+  "lvl_18": {
+    "title": "Sp_lit",
+    "problem": "The input will contain a sequence of 1s and 0s. Whenever you find a group of two or more 1s close together, separate them by inserting a 0 between them.\n\nNote: when inserting the 0, do not replace the 1, but shift it (and all the following digits) to the right.\n\nEXAMPLES:\n__110__->__1010__\n__111__->__10101__",
+    "tests": {
+      "test_01": "00110001001110",
+      "test_02": "0001000",
+      "test_03": "1",
+      "test_04": "1110111"
+    }
+  },
+  "lvl_19": {
+    "title": "Sort it out",
+    "problem": "Oh no! An earthquake messed up your collection of number-shaped fridge magnets, and now they're all scrambled on the floor in random order.\n\nCan you put them back in their place? First the 1's on the left, then the 2's in the middle, and finally the 3's on the right.\n\nMake sure you don't add or remove any magnet to your collection, they're all numbered! (hehe)\n\n(HINT: If you're stuck, look up \"bubble sort\" on your preferred search engine)\n\nEXAMPLE:\n__121313123__->__111122333__",
+    "tests": {
+      "test_01": "321",
+      "test_02": "23133123231321",
+      "test_03": "123",
+      "test_04": "133131131",
+      "test_05": "2222"
+    }
+  },
+  "lvl_20": {
+    "title": "Is this Lisp?",
+    "problem": "The input will contain a sequence of ( and ). Write ( if the parentheses are properly matched, ) otherwise.\n\nFor your convenience, in this level you can also use [ and ] as \"helper\" symbols.\n\nEXAMPLES:\n__())__->__)__\n__(())__->__(__\n__()()__->__(__\n__)()__->__)__",
+    "tests": {
+      "test_01": "()",
+      "test_02": "()()(())",
+      "test_03": "()(()))((()(()))",
+      "test_04": "(",
+      "test_05": "((()()(())))"
+    }
+  },
+  "lvl_21": {
+    "title": "Among us",
+    "problem": "Captain! The Impostors have infiltrated our spaceship, we must find them before they can sabotage the crewmembers.\n\nThe numbers 0 and 1 represent crewmembers, while the impostors are represented by the number 2.\n\nEliminate the impostors, without changing the number and the order of crewmates, and without leaving gaps between them.\n\nEXAMPLE:\n__01200__->__0100__\n(NOT __01_00__)",
+    "tests": {
+      "test_01": "110121110",
+      "test_02": "21001",
+      "test_03": "01112",
+      "test_04": "222",
+      "test_05": "11200121021120201121111121112002",
+      "test_06": "221000222210101112201112222110120101"
+    }
+  },
+  "lvl_22": {
+    "title": "It's a match!",
+    "problem": "The input will contain two sequences of 1s and 0s, separated by an underscore. Write 1 if they are equal, or 0 if they aren't.\n\nEXAMPLES:\n__10_10__->__1__\n__10_01__->__0__\n__101_1__->__0__",
+    "tests": {
+      "test_01": "1_0",
+      "test_02": "100100101_10010010",
+      "test_03": "000101010_000101010",
+      "test_04": "0010101111_00101011110"
+    }
+  },
+  "lvl_23": {
+    "title": "Apples to oranges",
+    "problem": "You are a contestant in a game show on TV. The host shows you two boxes: the one on the left is full of apples, the one on the right contains oranges. Can you guess which box contains more fruits?\n\nYour input will look like this:\n__[AA]_[OOO]__\nEach pair of brackets represents a box, each A represents an apple, and each O represents an orange.\n\nOverwrite the underscore between the two boxes with the symbol > if there are more apples, < if there are more oranges, or = if they are equal.\n\nDo not overwrite the letters or the brackets. The output should look like this:\n__[AA]<[OOO]__",
+    "tests": {
+      "test_01": "[AAAA]_[OO]",
+      "test_02": "[AAAAAAAA]_[OOOOOOOOOOOOOO]",
+      "test_03": "[AAA]_[OOO]",
+      "test_04": "[AAAA]_[]",
+      "test_05": "[]_[]",
+      "test_06": "[]_[OOO]"
+    }
+  },
+  "lvl_24": {
+    "title": "esreveR",
+    "problem": "The input will contain a sequence of digits. Write to output its reverse.\n\nTo make things easier, the input will contain only digits 1 through 5.\n\nEXAMPLES:\n__42__->__24__\n__311__->__113__",
+    "tests": {
+      "test_01": "123",
+      "test_02": "4",
+      "test_03": "5555",
+      "test_04": "21532152131123"
+    }
+  },
+  "lvl_25": {
+    "title": "Majority vote",
+    "problem": "You just received a call from the President's office. He was very satisfied with the work you did for him in level 4, and he decided to give you another job: write the software that will count the votes in the upcoming election.\n\nYou will receive in input a list of 0's and 1's. Each 0 represents a vote for the re-election of the current president, and each 1 represents a vote for the other candidate.\nYou must count the votes, and declare the winner: write in the output a single 1 or 0, depending on who obtained the majority. In the case of a tie, the rules say that the current president gets re-elected anyway, so write a 0.\n\nEXAMPLE:\n__1100011101__->__1__",
+    "tests": {
+      "test_01": "11010011",
+      "test_02": "0001000000000011101001101",
+      "test_03": "01110001",
+      "test_04": "0",
+      "test_05": "1111",
+      "test_06": "00011111"
+    }
+  }
+}
