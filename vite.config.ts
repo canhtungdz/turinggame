@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Nếu deploy trên Vercel hoặc chạy local thì base là '/', còn lại (GitHub Pages) là '/turinggame/'
-  base: process.env.VERCEL ? '/' : '/turinggame/',
+  // Nếu deploy trên Vercel/Cloudflare Pages hoặc chạy local thì base là '/', còn lại (GitHub Pages) là '/turinggame/'
+  base: (process.env.VERCEL || process.env.CF_PAGES) ? '/' : '/turinggame/',
   plugins: [
     react(),
     tailwindcss(),
