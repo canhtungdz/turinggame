@@ -52,7 +52,7 @@ export const LEVELS: GameLevel[] = [
             "title": "[Counting inTENsifies]",
             "description": "Create a machine that, given a number, outputs the same number multiplied by TEN.\n\n(HINT: Underscores can be overwritten)",
             "hints": [
-                "EXAMPLE:\n__123__->__1230_"
+                "__123__->__1230_"
             ],
             "allowedSymbols": [
                 "0",
@@ -92,7 +92,7 @@ export const LEVELS: GameLevel[] = [
             "title": "There can be only ONE",
             "description": "Scan the input, and delete every 1 except the first.\n\n(HINT: To delete a character, overwrite it with an underscore)",
             "hints": [
-                "EXAMPLE:\n__01213__->__012_3__"
+                "__01213__->__012_3__"
             ],
             "allowedSymbols": [
                 "0",
@@ -127,7 +127,7 @@ export const LEVELS: GameLevel[] = [
             "title": "NICEn't",
             "description": "The President is sick of all the immature jokes on the Internet, and decided to ban the number 69.\nYour task is to create a machine that scans the input, and replaces every occurrence of the forbidden number with its politically correct neighbour, the number 68.",
             "hints": [
-                "EXAMPLES:\n__24699__->__24689__\n__69669__->__68668__"
+                "__24699__->__24689__\n__69669__->__68668__"
             ],
             "allowedSymbols": [
                 "0",
@@ -172,7 +172,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Hide and seek",
             "description": "Delete all the x's that are not hiding inside of parentheses.",
             "hints": [
-                "EXAMPLES:\n__x(xx)xx__->__(xx)__\n_(x)x(x)_->_(x)_(x)_"
+                "__x(xx)xx__->__(xx)__\n_(x)x(x)_->_(x)_(x)_"
             ],
             "allowedSymbols": [
                 "x",
@@ -210,7 +210,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Let's call it EVEN",
             "description": "In this level you will only need the numbers 0 and 1.\n\nCount the 1's in the input and determine if their total number is even or ODD.\nIf it's ODD, append another 1 at the end of the input, so that the total number of 1's becomes even.\nDo not overwrite the 0's.",
             "hints": [
-                "EXAMPLE:\n__0100__->__01001_\n__0110__->__0110__"
+                "__0100__->__01001_\n__0110__->__0110__"
             ],
             "allowedSymbols": [
                 "0",
@@ -247,7 +247,7 @@ export const LEVELS: GameLevel[] = [
             "title": "The magic number",
             "description": "Write 1 if the input number is divisible by 3, or 0 otherwise.\n\nRemember to delete the original number, leave only the 0 or the 1.\n\n(HINT: A number is divisible by 3 if the sum of its digits is divisible by 3. If you're stuck, look at the previous level for inspiration.)",
             "hints": [
-                "EXAMPLES:\n__123__->__1__\n__301__->__0__"
+                "__123__->__1__\n__301__->__0__"
             ],
             "allowedSymbols": [
                 "0",
@@ -297,7 +297,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Survival of the largest",
             "description": "Scan the input, and output the largest digit you find.\n\nTo make things easier, the input will contain only digits 1 through 5.",
             "hints": [
-                "EXAMPLES:\n__114223__->__4__\n__355252__->__5__"
+                "__114223__->__4__\n__355252__->__5__"
             ],
             "allowedSymbols": [
                 "1",
@@ -372,7 +372,7 @@ export const LEVELS: GameLevel[] = [
             "title": "The other magic number",
             "description": "Write 1 if the input number is divisible by 100, or 0 otherwise.\n\nRemember to delete the original number, leave only the 0 or the 1.",
             "hints": [
-                "EXAMPLES:\n__123__->__0__\n__4200__->__1__"
+                "__123__->__0__\n__4200__->__1__"
             ],
             "allowedSymbols": [
                 "0",
@@ -422,7 +422,7 @@ export const LEVELS: GameLevel[] = [
             "title": "+1!",
             "description": "Increment the input number by 1.",
             "hints": [
-                "EXAMPLE:\n__23__->__24__\n__39__->__40__"
+                "__23__->__24__\n__39__->__40__"
             ],
             "allowedSymbols": [
                 "0",
@@ -472,7 +472,7 @@ export const LEVELS: GameLevel[] = [
             "title": "The league of the N evil exes",
             "description": "You will receive in input a number N (one digit, between 0 and 9).\n\nWrite in output the letter X exactly N times, and delete the initial number.",
             "hints": [
-                "EXAMPLE:\n__5__->__XXXXX__"
+                "__5__->__XXXXX__"
             ],
             "allowedSymbols": [
                 "0",
@@ -518,7 +518,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Clash of numbers",
             "description": "The input will contain two digits. Write the difference between the two digits (without sign).\n\n(HINT: There are two methods to solve this problem: you can calculate the difference directly, or you can decrement both digits one by one until one of them reaches 0. I recommend the second approach.)",
             "hints": [
-                "EXAMPLES:\n__53__->__2__\n__18__->__7__"
+                "__53__->__2__\n__18__->__7__"
             ],
             "allowedSymbols": [
                 "0",
@@ -573,7 +573,7 @@ export const LEVELS: GameLevel[] = [
             "title": "It all adds up",
             "description": "The input will contain two numbers separated by an underscore. Your output should contain the sum of the two numbers.",
             "hints": [
-                "EXAMPLES:\n__15_9__->__24__\n__41_182__->__223__"
+                "__15_9__->__24__\n__41_182__->__223__"
             ],
             "allowedSymbols": [
                 "0",
@@ -619,7 +619,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Make it COUNT",
             "description": "Write (in numbers) how many times the letter X is repeated in the input tape.\n\nRemember to delete the X's as you count them: the final output must contain only the number.\n\n(HINT: While running a test, increase the speed using the + button)",
             "hints": [
-                "EXAMPLE:\n__XXX__->__3__"
+                "__XXX__->__3__"
             ],
             "allowedSymbols": [
                 "0",
@@ -709,7 +709,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Double trouble",
             "description": "You just hacked in your bank account! Use a Turing Machine to double your amount of $.",
             "hints": [
-                "EXAMPLE:\n__$$$__->__$$$$$$__"
+                "__$$$__->__$$$$$$__"
             ],
             "allowedSymbols": [
                 "$",
@@ -740,7 +740,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Sp_lit",
             "description": "The input will contain a sequence of 1s and 0s. Whenever you find a group of two or more 1s close together, separate them by inserting a 0 between them.\n\nNote: when inserting the 0, do not replace the 1, but shift it (and all the following digits) to the right.",
             "hints": [
-                "EXAMPLES:\n__110__->__1010__\n__111__->__10101__"
+                "__110__->__1010__\n__111__->__10101__"
             ],
             "allowedSymbols": [
                 "0",
@@ -777,7 +777,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Sort it out",
             "description": "Oh no! An earthquake messed up your collection of number-shaped fridge magnets, and now they're all scrambled on the floor in random order.\n\nCan you put them back in their place? First the 1's on the left, then the 2's in the middle, and finally the 3's on the right.\n\nMake sure you don't add or remove any magnet to your collection, they're all numbered! (hehe)\n\n(HINT: If you're stuck, look up \"bubble sort\" on your preferred search engine)",
             "hints": [
-                "EXAMPLE:\n__121313123__->__111122333__"
+                "__121313123__->__111122333__"
             ],
             "allowedSymbols": [
                 "1",
@@ -820,7 +820,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Is this Lisp?",
             "description": "The input will contain a sequence of ( and ). Write ( if the parentheses are properly matched, ) otherwise.\n\nFor your convenience, in this level you can also use [ and ] as \"helper\" symbols.",
             "hints": [
-                "EXAMPLES:\n__())__->__)__\n__(())__->__(__\n__()()__->__(__\n__)()__->__)__"
+                "__())__->__)__\n__(())__->__(__\n__()()__->__(__\n__)()__->__)__"
             ],
             "allowedSymbols": [
                 "(",
@@ -864,7 +864,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Among us",
             "description": "Captain! The Impostors have infiltrated our spaceship, we must find them before they can sabotage the crewmembers.\n\nThe numbers 0 and 1 represent crewmembers, while the impostors are represented by the number 2.\n\nEliminate the impostors, without changing the number and the order of crewmates, and without leaving gaps between them.",
             "hints": [
-                "EXAMPLE:\n__01200__->__0100__\n(NOT __01_00__)"
+                "__01200__->__0100__\n(NOT __01_00__)"
             ],
             "allowedSymbols": [
                 "0",
@@ -912,7 +912,7 @@ export const LEVELS: GameLevel[] = [
             "title": "It's a match!",
             "description": "The input will contain two sequences of 1s and 0s, separated by an underscore. Write 1 if they are equal, or 0 if they aren't.",
             "hints": [
-                "EXAMPLES:\n__10_10__->__1__\n__10_01__->__0__\n__101_1__->__0__"
+                "__10_10__->__1__\n__10_01__->__0__\n__101_1__->__0__"
             ],
             "allowedSymbols": [
                 "0",
@@ -1004,7 +1004,7 @@ export const LEVELS: GameLevel[] = [
             "title": "esreveR",
             "description": "The input will contain a sequence of digits. Write to output its reverse.\n\nTo make things easier, the input will contain only digits 1 through 5.",
             "hints": [
-                "EXAMPLES:\n__42__->__24__\n__311__->__113__"
+                "__42__->__24__\n__311__->__113__"
             ],
             "allowedSymbols": [
                 "1",
@@ -1044,7 +1044,7 @@ export const LEVELS: GameLevel[] = [
             "title": "Majority vote",
             "description": "You just received a call from the President's office. He was very satisfied with the work you did for him in level 4, and he decided to give you another job: write the software that will count the votes in the upcoming election.\n\nYou will receive in input a list of 0's and 1's. Each 0 represents a vote for the re-election of the current president, and each 1 represents a vote for the other candidate.\nYou must count the votes, and declare the winner: write in the output a single 1 or 0, depending on who obtained the majority. In the case of a tie, the rules say that the current president gets re-elected anyway, so write a 0.",
             "hints": [
-                "EXAMPLE:\n__1100011101__->__1__"
+                "__1100011101__->__1__"
             ],
             "allowedSymbols": [
                 "0",
