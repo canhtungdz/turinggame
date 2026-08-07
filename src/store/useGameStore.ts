@@ -60,7 +60,7 @@ export const useGameStore = create<GameState>()(
                     read: sym,
                     write: sym,
                     move: 'R' as const,
-                    next: HALT_STATE
+                    next: sym === ' ' ? HALT_STATE : '01'
                 }));
 
                 set((state) => {
@@ -117,8 +117,8 @@ export const useGameStore = create<GameState>()(
                 const defaultRules = state.levelInfo.allowedSymbols.map(sym => ({
                     read: sym,
                     write: sym,
-                    move: 'N' as const,
-                    next: id // Next state tro về chính nó (cần user đổi)
+                    move: 'R' as const,
+                    next: sym === ' ' ? HALT_STATE : id
                 }));
 
                 const newCardsState = [...state.cards, { id, rules: defaultRules }];
