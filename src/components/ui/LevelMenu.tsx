@@ -1,4 +1,5 @@
 import React from 'react';
+import { Lock } from 'lucide-react';
 import { useGameStore } from '../../store/useGameStore';
 import { LEVELS } from '../../levels';
 
@@ -65,8 +66,8 @@ const LevelMenu: React.FC<LevelMenuProps> = ({ onClose }) => {
                                 </div>
 
                                 {!isUnlocked && (
-                                    <div className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl opacity-30">
-                                        🔒
+                                    <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-40 text-[#00FF00]">
+                                        <Lock size={20} />
                                     </div>
                                 )}
                             </button>
