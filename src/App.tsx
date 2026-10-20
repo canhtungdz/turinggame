@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import MainLayout from './components/ui/MainLayout';
 import LevelMenu from './components/ui/LevelMenu';
 import { useGameStore } from './store/useGameStore';
+import { useLanguageStore } from './store/useLanguageStore';
 
 export default function App() {
   const loadLevelById = useGameStore(state => state.loadLevelById);
@@ -14,15 +15,27 @@ export default function App() {
     if (!currentLevelId) {
       loadLevelById('lvl_01');
     }
+  }, [loadLevelById, currentLevelId]);
 
-    // Gắn Developer Backdoor Console Script
-    (window as any).turingAdmin = () => {
+  useEffect(() => {
+    window.turingAdmin = () => {
       enableAdminMode();
       console.log("%c[ADMIN OVERRIDE ENABLED] \nFull Sector Access Granted!", "color: #00FF00; font-size: 16px; font-weight: bold; background: black; padding: 4px; border: 1px solid #00FF00;");
       return "[SYSTEM]: You now have full access to all levels.";
     };
 
-  }, [loadLevelById, currentLevelId, enableAdminMode]);
+    window.turingLanguage = (language) => {
+      if (language !== undefined) {
+        useLanguageStore.getState().setLanguage(language);
+      }
+      return useLanguageStore.getState().language;
+    };
+
+    return () => {
+      delete window.turingAdmin;
+      delete window.turingLanguage;
+    };
+  }, [enableAdminMode]);
 
   return (
     <div className="w-full h-full flex justify-center items-center bg-[#0a0a0a] relative">

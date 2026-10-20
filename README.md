@@ -52,3 +52,15 @@ Nghĩa là: Khi gặp `0`, máy đổi thành `1`, di chuyển sang phải và t
 Hãy nghĩ đơn giản: **Đọc gì → Ghi gì → Đi đâu → Làm gì tiếp?**
 
 Chỉ cần lặp lại 4 câu hỏi này để xây dựng chương trình của bạn!
+
+## 🌐 Ngôn ngữ đề bài
+
+Mở Console trong công cụ dành cho nhà phát triển của trình duyệt để đổi ngôn ngữ:
+
+```js
+turingLanguage('vi') // Mô tả đề bài và ví dụ bằng tiếng Việt
+turingLanguage('en') // Mô tả đề bài và ví dụ bằng tiếng Anh
+turingLanguage()     // Xem ngôn ngữ đang dùng: 'en' hoặc 'vi'
+```
+
+Mặc định là tiếng Anh. Lựa chọn được lưu trên trình duyệt và áp dụng cho cả 25 màn chơi. Chỉ nội dung bên trong **MISSION_OBJECTIVE** và **EXAMPLES** được chuyển ngữ; tên màn chơi, nhãn và các nút giao diện vẫn giữ tiếng Anh.
