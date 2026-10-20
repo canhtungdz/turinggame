@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 📖 HƯỚNG DẪN CHƠI TURING MACHINE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="docs/images/1.png" alt="Ảnh trò chơi 1" width="24%" />
+  <img src="docs/images/2.png" alt="Ảnh trò chơi 2" width="24%" />
+  <img src="docs/images/3.png" alt="Ảnh trò chơi 3" width="24%" />
+  <img src="docs/images/4.png" alt="Ảnh trò chơi 4" width="24%" />
+</p>
 
-Currently, two official plugins are available:
+## 🎯 Mục tiêu
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Lập trình một cỗ máy để biến đổi chuỗi **Input** thành **Expected Output** bằng cách đọc, ghi và di chuyển trên băng dữ liệu.
 
-## React Compiler
+## 🧩 1. Các thành phần chính
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Tape:** Dải ô chứa các ký tự như `0`, `1`, `_`, ...
+- **Head:** Đầu đọc, dùng để đọc và thay đổi ký tự trên Tape.
+- **State Card:** Thẻ chứa các quy tắc điều khiển máy.
+  - `01`: Thẻ bắt đầu.
+  - `00`: Thẻ kết thúc (dừng máy).
+  - `02`, `03`, ...: Các thẻ xử lý bổ sung.
 
-## Expanding the ESLint configuration
+## ⚙️ 2. Cách lập trình
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Trong tab **CARDS**, mỗi quy tắc gồm 4 phần:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Cột | Chức năng |
+| --- | --- |
+| **IN** | Ký tự máy đang đọc |
+| **OUT** | Ký tự muốn ghi vào ô |
+| **DIR** | Di chuyển: `>` phải, `<` trái, `-` đứng yên |
+| **NEXT** | Thẻ sẽ chuyển đến tiếp theo |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Ví dụ:** `IN: 0 → OUT: 1 → DIR: > → NEXT: 01`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Nghĩa là: Khi gặp `0`, máy đổi thành `1`, di chuyển sang phải và tiếp tục thực hiện thẻ `01`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> 💡 Muốn dừng máy, hãy đặt `NEXT = 00`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🎮 3. Các bước chơi
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **INFO:** Đọc yêu cầu và xem kết quả cần đạt.
+2. **CARDS:** Thiết lập quy tắc trong thẻ `01`. Thêm thẻ nếu cần.
+3. **TESTS:** Chạy thử chương trình:
+   - **Step:** Chạy từng bước.
+   - **Play/Pause:** Chạy tự động hoặc tạm dừng.
+   - **Reset:** Chạy lại từ đầu.
+4. **SUBMIT:** Khi tất cả bài kiểm tra đều **Passed**, nhấn **SUBMIT** để hoàn thành màn chơi.
+
+## 💡 Mẹo nhỏ
+
+Hãy nghĩ đơn giản: **Đọc gì → Ghi gì → Đi đâu → Làm gì tiếp?**
+
+Chỉ cần lặp lại 4 câu hỏi này để xây dựng chương trình của bạn!
