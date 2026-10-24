@@ -64,3 +64,14 @@ turingLanguage()     // Xem ngôn ngữ đang dùng: 'en' hoặc 'vi'
 ```
 
 Mặc định là tiếng Anh. Lựa chọn được lưu trên trình duyệt và áp dụng cho cả 25 màn chơi. Chỉ nội dung bên trong **MISSION_OBJECTIVE** và **EXAMPLES** được chuyển ngữ; tên màn chơi, nhãn và các nút giao diện vẫn giữ tiếng Anh.
+
+## 🛠️ Chế độ admin
+
+Chạy trong Console của trình duyệt:
+
+```js
+turingAdmin()      // Bật admin, mở toàn bộ màn chơi
+turingAdmin(false) // Tắt admin, mở khóa màn theo tiến độ đã hoàn thành
+```
+
+Trạng thái bật/tắt được lưu trên trình duyệt. Tắt admin vẫn giữ nguyên lời giải và tiến độ đã hoàn thành.

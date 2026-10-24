@@ -8,6 +8,7 @@ export default function App() {
   const loadLevelById = useGameStore(state => state.loadLevelById);
   const currentLevelId = useGameStore(state => state.currentLevelId);
   const enableAdminMode = useGameStore(state => state.enableAdminMode);
+  const disableAdminMode = useGameStore(state => state.disableAdminMode);
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
@@ -18,7 +19,13 @@ export default function App() {
   }, [loadLevelById, currentLevelId]);
 
   useEffect(() => {
-    window.turingAdmin = () => {
+    window.turingAdmin = (enabled = true) => {
+      if (!enabled) {
+        disableAdminMode();
+        console.log('[ADMIN OVERRIDE DISABLED]');
+        return '[SYSTEM]: Admin mode disabled. Normal level progression restored.';
+      }
+
       enableAdminMode();
       console.log("%c[ADMIN OVERRIDE ENABLED] \nFull Sector Access Granted!", "color: #00FF00; font-size: 16px; font-weight: bold; background: black; padding: 4px; border: 1px solid #00FF00;");
       return "[SYSTEM]: You now have full access to all levels.";
@@ -35,7 +42,7 @@ export default function App() {
       delete window.turingAdmin;
       delete window.turingLanguage;
     };
-  }, [enableAdminMode]);
+  }, [enableAdminMode, disableAdminMode]);
 
   return (
     <div className="w-full h-full flex justify-center items-center bg-[#0a0a0a] relative">

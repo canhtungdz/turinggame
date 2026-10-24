@@ -25,6 +25,7 @@ interface GameState {
     loadLevelById: (id: string, initialCards?: MachineCard[]) => void;
     completeCurrentLevel: () => void;
     enableAdminMode: () => void;
+    disableAdminMode: () => void;
 
     // Card & Rules Management
     addCard: (id: StateId) => void;
@@ -98,6 +99,7 @@ export const useGameStore = create<GameState>()(
             },
 
             enableAdminMode: () => set({ isAdmin: true }),
+            disableAdminMode: () => set({ isAdmin: false }),
 
             completeCurrentLevel: () => set((state) => {
                 if (!state.currentLevelId) return state;

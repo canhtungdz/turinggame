@@ -2,7 +2,7 @@ import type { Language } from '../store/useLanguageStore';
 
 declare global {
     interface Window {
-        turingAdmin?: () => string;
+        turingAdmin?: (enabled?: boolean) => string;
         turingLanguage?: (language?: Language) => Language;
     }
 }
